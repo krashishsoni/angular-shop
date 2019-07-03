@@ -1,0 +1,14 @@
+
+<div ngbDropdown *ngIf="auth.GetLoggedInUser">
+	<button class="btn btn-primary" ngbDropdownToggle>
+        <!-- <span class="d-none d-sm-block">  -->
+         {{auth.GetLoggedInUser.DisplayName}}
+         <!-- </span>
+  <i class="fa fa-user d-sm-none"></i> -->
+  </button>
+      <div ngbDropdownMenu>
+        <button ngbDropdownItem (click)="auth.SignOut()">Sign Out</button>
+      </div>
+    </div>
+
+<div *ngIf="!auth.GetLoggedInUser">Login</div>

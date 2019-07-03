@@ -1,0 +1,14 @@
+@import '~ngx-toastr/toastr';
+$fa-font-path : '~font-awesome/fonts';
+ $body-bg: #fff;
+// $body-color: rgb(255, 255, 255);
+// $theme-colors: (
+//   "primary": #f0ec09,
+//   "danger": #08fa00,
+// );
+
+$enable-rounded: false;
+// $brand-danger: #08fa00;
+// $font-size-base: 18px;
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~font-awesome/scss/font-awesome.scss";

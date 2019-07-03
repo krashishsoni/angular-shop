@@ -1,0 +1,60 @@
+<!-- <div ngbDropdown display="dynamic" class="d-inline-block">
+	<button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Toggle dropdown</button>
+      <div class="p-0" ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        
+<div class="card">
+  <div class="card-body">
+    This is some text within a card body.
+  </div>
+</div>        
+              </div>
+    </div> -->
+
+<div class="cart-header-summary">
+	<a href="#"><i class="fa fa-shopping-cart"></i> Cart <span class="badge badge-primary">{{ecart.GetUserCart.TotalQuantity}}</span></a>
+<!-- {{ecart.GetUserCart|json}} -->
+
+<nav class="cart-sidebar-nav" *ngIf="ecart.GetUserCart.TotalQuantity > 0">
+  <div>
+            <i class="fas fa-arrow-left"></i>
+        </div>
+            <div class="sidebar-header text-center">
+            <h3>Cart</h3>
+        </div>
+
+<div class="table-responsive">
+<table class="table  table-sm">
+  <tbody>
+
+<tr *ngFor="let item of ecart.GetUserCart.Items">
+      <th scope="row">
+            <img class="img-fluid"  src="{{item.Thumbnail}}" height="50" width="50">
+      </th>
+      <td>
+        <b>{{item.Name}}</b>
+        <p>Qnty:{{item.Quantity}}</p>
+      <p>{{item.BasePrice | number:'1.2-2'}}</p>
+      </td>
+      <td>
+      {{item.Price | number:'1.2-2'}}
+      </td>
+      <td>
+        <button (click)="RemoveItem(item)">X</button>
+      </td>
+    </tr>
+  </tbody>
+   <tfoot class="thead-light">
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col">{{ecart.GetUserCart.TotalAmount | number:'1.2-2'}}</th>
+      <th scope="col"></th>
+    </tr>
+  </tfoot>
+</table>
+</div>
+
+</nav>
+
+
+</div>
