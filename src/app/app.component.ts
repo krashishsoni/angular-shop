@@ -4,6 +4,7 @@ import { ToastrService } from 'ngx-toastr';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { AuthenticationService } from './core/services/authentication.service';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
+import { Meta } from '@angular/platform-browser';
 import { AppDomainService } from './core/services/app-domain.service';
 @Component({
   selector: 'my-app',
@@ -11,11 +12,12 @@ import { AppDomainService } from './core/services/app-domain.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private animate: AnimationService, private toastr: ToastrService,
+  constructor(private meta: Meta,private animate: AnimationService, private toastr: ToastrService,
     private http: HttpClient, private modalService: NgbModal
     , private app: AppDomainService,private auth:AuthenticationService) {
 
-
+ this.meta.addTag({ name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' });
+    
 
   }
 
