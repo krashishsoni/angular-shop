@@ -34,9 +34,12 @@ export class AppComponent {
   name = 'Angular';
   ShowLoader() {
     // this.animate.ShowPageLoader(true);
-    this.app.PortalInfoGet().subscribe(x => { this.name = x.Name; }
-    );
-    // this.toastr.show('Hello world!', 'Toastr fun!');
+    // this.app.PortalInfoGet().subscribe(x => { this.name = x.Name; }
+    // );
+    //  this.toastr.error('Hello world!');
+     this.toastr.error('Hello world!', 'Toastr fun!');
+
+    //  this.toastr.success('Hello world!', 'Toastr fun!');
     // this.http.get('urlhere').subscribe();
     // throw new Error('My Pretty Error');
   }

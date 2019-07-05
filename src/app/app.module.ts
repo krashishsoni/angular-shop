@@ -21,7 +21,8 @@ import { EcommerceShoppingModule } from './shopping/ecommerce-shopping.module';
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    ToastrModule.forRoot({ positionClass: 'toast-bottom-right' }), AppRoutingModule,
+    ToastrModule.forRoot({  positionClass: 'toast-bottom-right'
+    ,easing:'slide' }), AppRoutingModule,
     FormsModule,
     AdminModule,
     SharedComponentsModule,
